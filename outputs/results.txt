@@ -4,40 +4,40 @@ UNIVERSITY ACADEMIC & HOSTEL POLICY ADVISOR — RAG ASSESSMENT
 
 ┌─ Q1
 │  Q: I have 72% attendance this semester. How many attendance marks will I receive, and am I eligible to appear for the final examination?
-│  A: [ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}
-│  Sources: N/A
-│  Latency: 2.52s
+│  A: A student with 72% attendance receives 0 attendance marks and is not eligible to appear for the final examination.
+│  Sources: page 3, page 5, page 9
+│  Latency: 2.34s
 └────────────────────────────────────────────────────────────────────
 
 ┌─ Q2
 │  Q: Within how many days after recovery must a student submit supporting documents for Medical Leave? What happens if the documents are submitted after this period?
-│  A: [ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'service': 'generativelanguage.googleapis.com', 'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent'}}]}}
+│  A: [not found]
 │  Sources: N/A
-│  Latency: 0.14s
+│  Latency: 0.09s
 └────────────────────────────────────────────────────────────────────
 
 ┌─ Q3
 │  Q: What is the monthly subscription fee for using the campus swimming pool and indoor squash court?
-│  A: [ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}
-│  Sources: N/A
-│  Latency: 0.11s
-└────────────────────────────────────────────────────────────────────
-
-┌─ Q4
-│  Q: What minimum percentage of batch-student support is required to propose a new student club, and which authority reviews the proposal first?
-│  A: [ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'service': 'generativelanguage.googleapis.com', 'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent'}}]}}
+│  A: [not found]
 │  Sources: N/A
 │  Latency: 0.08s
 └────────────────────────────────────────────────────────────────────
 
+┌─ Q4
+│  Q: What minimum percentage of batch-student support is required to propose a new student club, and which authority reviews the proposal first?
+│  A: [not found]
+│  Sources: N/A
+│  Latency: 0.09s
+└────────────────────────────────────────────────────────────────────
+
 ┌─ Q5
 │  Q: What is the default WPA2 password for the Mirai_Student_5G campus Wi-Fi network?
-│  A: [ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'service': 'generativelanguage.googleapis.com', 'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent'}}]}}
+│  A: [not found]
 │  Sources: N/A
-│  Latency: 0.19s
+│  Latency: 0.08s
 └────────────────────────────────────────────────────────────────────
 
 ======================================================================
 Total questions: 5
-Answered: 5  |  Not found: 0
+Answered: 1  |  Not found: 4  |  Errors: 0
 ======================================================================
