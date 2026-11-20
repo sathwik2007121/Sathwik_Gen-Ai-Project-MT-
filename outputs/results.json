@@ -1,0 +1,37 @@
+[
+  {
+    "id": "Q1",
+    "question": "I have 72% attendance this semester. How many attendance marks will I receive, and am I eligible to appear for the final examination?",
+    "answer": "[ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}",
+    "sources": [],
+    "latency_s": 2.52
+  },
+  {
+    "id": "Q2",
+    "question": "Within how many days after recovery must a student submit supporting documents for Medical Leave? What happens if the documents are submitted after this period?",
+    "answer": "[ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'service': 'generativelanguage.googleapis.com', 'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent'}}]}}",
+    "sources": [],
+    "latency_s": 0.14
+  },
+  {
+    "id": "Q3",
+    "question": "What is the monthly subscription fee for using the campus swimming pool and indoor squash court?",
+    "answer": "[ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent', 'service': 'generativelanguage.googleapis.com'}}]}}",
+    "sources": [],
+    "latency_s": 0.11
+  },
+  {
+    "id": "Q4",
+    "question": "What minimum percentage of batch-student support is required to propose a new student club, and which authority reviews the proposal first?",
+    "answer": "[ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'service': 'generativelanguage.googleapis.com', 'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent'}}]}}",
+    "sources": [],
+    "latency_s": 0.08
+  },
+  {
+    "id": "Q5",
+    "question": "What is the default WPA2 password for the Mirai_Student_5G campus Wi-Fi network?",
+    "answer": "[ERROR] 401 UNAUTHENTICATED. {'error': {'code': 401, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'UNAUTHENTICATED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'ACCESS_TOKEN_TYPE_UNSUPPORTED', 'metadata': {'service': 'generativelanguage.googleapis.com', 'method': 'google.ai.generativelanguage.v1.GenerativeService.GenerateContent'}}]}}",
+    "sources": [],
+    "latency_s": 0.19
+  }
+]
