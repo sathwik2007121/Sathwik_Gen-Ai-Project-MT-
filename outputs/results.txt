@@ -4,40 +4,40 @@ UNIVERSITY ACADEMIC & HOSTEL POLICY ADVISOR — RAG ASSESSMENT
 
 ┌─ Q1
 │  Q: I have 72% attendance this semester. How many attendance marks will I receive, and am I eligible to appear for the final examination?
-│  A: A student with 72% attendance receives 0 attendance marks and is not eligible to appear for the final examination.
+│  A: 72% attendance results in 0 attendance marks and the student is NOT eligible to appear for the final examination.
 │  Sources: page 3, page 5, page 9
-│  Latency: 2.34s
+│  Latency: 2.35s
 └────────────────────────────────────────────────────────────────────
 
 ┌─ Q2
 │  Q: Within how many days after recovery must a student submit supporting documents for Medical Leave? What happens if the documents are submitted after this period?
-│  A: [not found]
-│  Sources: N/A
-│  Latency: 0.09s
+│  A: Supporting documents must be submitted within 7 calendar days of the student's recovery and return to campus. If documents are submitted after the 7-day deadline, the leave will be treated as an Unauthorized Absence and the absent days will be counted against the student's attendance record without any exemption.
+│  Sources: page 5, page 6, page 8, page 9
+│  Latency: 0.12s
 └────────────────────────────────────────────────────────────────────
 
 ┌─ Q3
 │  Q: What is the monthly subscription fee for using the campus swimming pool and indoor squash court?
-│  A: [not found]
-│  Sources: N/A
-│  Latency: 0.08s
+│  A: The monthly subscription fee is ₹750 for the swimming pool and ₹400 for the indoor squash court.
+│  Sources: page 11, page 12, page 13
+│  Latency: 0.15s
 └────────────────────────────────────────────────────────────────────
 
 ┌─ Q4
 │  Q: What minimum percentage of batch-student support is required to propose a new student club, and which authority reviews the proposal first?
-│  A: [not found]
-│  Sources: N/A
-│  Latency: 0.09s
+│  A: The proposal must be supported by at least 15% of the students in the proposer's batch. The Student Affairs Committee (SAC) conducts the first-level review.
+│  Sources: page 2, page 15, page 19
+│  Latency: 0.12s
 └────────────────────────────────────────────────────────────────────
 
 ┌─ Q5
 │  Q: What is the default WPA2 password for the Mirai_Student_5G campus Wi-Fi network?
 │  A: [not found]
 │  Sources: N/A
-│  Latency: 0.08s
+│  Latency: 0.09s
 └────────────────────────────────────────────────────────────────────
 
 ======================================================================
 Total questions: 5
-Answered: 1  |  Not found: 4  |  Errors: 0
+Answered: 4  |  Not found: 1  |  Errors: 0
 ======================================================================

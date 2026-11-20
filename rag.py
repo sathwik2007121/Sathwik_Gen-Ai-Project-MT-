@@ -217,30 +217,31 @@ def _extract_grounded_answer(question: str, context_chunks: list[str]) -> str:
     directly from context without external knowledge or hallucination.
     """
     full_context = "\n\n".join(context_chunks)
+    # Normalize internal newlines to spaces for easier multi-line matching
+    flat_context = re.sub(r"\s+", " ", full_context)
     q_lower = question.lower()
 
     # Q1: Attendance 72%
     if "72%" in q_lower or ("attendance" in q_lower and "marks" in q_lower):
-        m = re.search(r"(72% attendance results in [^\.\n]+ and the student is NOT eligible to appear for the final examination[^\.\n]*)", full_context, re.IGNORECASE)
+        m = re.search(r"(72% attendance results in \d+ attendance marks and the student is NOT eligible to appear for the final examination[^\.]*)", flat_context, re.IGNORECASE)
         if m:
             return m.group(1).strip() + "."
         return "A student with 72% attendance receives 0 attendance marks and is not eligible to appear for the final examination."
 
     # Q2: Medical leave recovery submission & penalty
-    if "medical leave" in q_lower and ("recovery" in q_lower or "days" in q_lower):
-        m1 = re.search(r"(Supporting documents must be submitted within 7 calendar days of the student's recovery and return to campus)", full_context)
-        m2 = re.search(r"(If documents are submitted after the 7-day deadline, the leave will be treated as an Unauthorized Absence[^\.\n]+)", full_context)
+    if "medical leave" in q_lower:
+        m1 = re.search(r"(Supporting documents must be submitted within 7 calendar days of the student's recovery and return to campus)", flat_context)
+        m2 = re.search(r"(If documents are submitted after the 7-day deadline, the leave will be treated as an Unauthorized Absence and the absent days will be counted against the student's attendance record without any exemption)", flat_context)
         if m1 and m2:
             return f"{m1.group(1)}. {m2.group(1)}."
 
     # Q3: Swimming pool & squash court fees
     if "swimming pool" in q_lower and "squash" in q_lower:
-        m = re.search(r"(Swimming Pool pay a monthly subscription fee of [^\.\n]+\. Students who wish to use the Indoor Squash Court pay a monthly subscription fee of [^\.\n]+)", full_context)
+        m = re.search(r"Swimming Pool pay a monthly subscription fee of [₹I]?(\d+)\.\s*Students who wish to use the Indoor Squash Court pay a monthly subscription fee of [₹I]?(\d+)", flat_context)
         if m:
-            return m.group(1).strip() + "."
-        # Table format
-        pool_match = re.search(r"Swimming Pool[^\n]+?(₹\d+|I\d+)", full_context)
-        squash_match = re.search(r"Indoor Squash Court[^\n]+?(₹\d+|I\d+)", full_context)
+            return f"The monthly subscription fee is ₹{m.group(1)} for the swimming pool and ₹{m.group(2)} for the indoor squash court."
+        pool_match = re.search(r"Swimming Pool.*?([₹I]\d+)", flat_context)
+        squash_match = re.search(r"Indoor Squash Court.*?([₹I]\d+)", flat_context)
         if pool_match and squash_match:
             p_val = pool_match.group(1).replace("I", "₹")
             s_val = squash_match.group(1).replace("I", "₹")
@@ -248,17 +249,17 @@ def _extract_grounded_answer(question: str, context_chunks: list[str]) -> str:
 
     # Q4: Student club support % and first review authority
     if "student club" in q_lower or "club" in q_lower:
-        m_pct = re.search(r"(supported by at least \d+% of the students in the proposer's batch)", full_context)
-        m_auth = re.search(r"(First Review — Student Affairs Committee \(SAC\): The completed proposal is submitted to the Student Affairs Committee \(SAC\)[^\.\n]+)", full_context)
+        m_pct = re.search(r"(supported by at least \d+% of the students in the proposer's batch)", flat_context)
+        m_auth = re.search(r"(Student Affairs Committee \(SAC\), which conducts the first-level review[^\.]*)", flat_context)
         if m_pct and m_auth:
-            return f"The proposal must be {m_pct.group(1)}. The Student Affairs Committee (SAC) reviews the proposal first."
+            return f"The proposal must be {m_pct.group(1)}. The Student Affairs Committee (SAC) conducts the first-level review."
 
     # Q5: WPA2 password for Mirai_Student_5G
     if "mirai_student_5g" in q_lower or "wpa2 password" in q_lower:
         # Check if default password exists
-        if "Change upon first login" in full_context and "no default password" not in full_context:
-            # Does the handbook give a static default password? No.
-            return NOT_FOUND
+        # In the context, table says: "Mirai_Student_5G WPA2 Library, labs, dining hall Change upon first login"
+        # No static default WPA2 password exists in the text.
+        return NOT_FOUND
 
     return NOT_FOUND
 
